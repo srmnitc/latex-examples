@@ -18,3 +18,12 @@ script:
  - bibtex bibtex
  - pdflatex -shell-escape bibtex.tex
  - pdflatex -shell-escape bibtex.tex
+ - mkdir public
+ - mv *.pdf public
+deploy:
+  - provider: pages
+    token: $GH_TOKEN
+    skip_cleanup: true
+    local_dir: public
+    on:
+      branch: master
