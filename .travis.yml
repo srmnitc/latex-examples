@@ -1,0 +1,20 @@
+install:
+ # tex install 
+ - source ./texlive_install.sh
+ # conda install for python 
+ - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+ - export PATH="$HOME/miniconda/bin:$PATH"
+ - bash miniconda.sh -b -p $HOME/miniconda
+ - conda config --set always_yes yes --set changeps1 no
+ - conda install -c conda-forge pygments
+cache:
+  directories:
+    - /tmp/texlive
+    - $HOME/.texlive
+script:
+ - pdflatex -shell-escape minted.tex
+ - pdflatex -shell-escape tikz.tex
+ - pdflatex -shell-escape bibtex.tex
+ - bibtex bibtex
+ - pdflatex -shell-escape bibtex.tex
+ - pdflatex -shell-escape bibtex.tex
