@@ -30,26 +30,7 @@ tlmgr install luatex
 # texlive-latex-base is needed to run pdflatex
 # Take packages from http://ctan.ebinger.cc/tex-archive/systems/texlive/tlnet/archive/
 tlmgr install                    \
+  collection-latexextra          \
+  collection-fontsrecommended    \
   minted                         \
   pygmentex                      \
-  collection-fontsrecommended    \
-  fvextra                        \
-  etoolbox                       \
-  fancyvrb                       \
-  upquote                        \
-  lineno                         \
-  catchfile                      \
-  xstring                        \
-  framed                         \
-  float                          \
-  pdfescape                      \
-  letltxmacro                    \
-  bitset                         \
-  psnfss                         \
-  helvetic                       \
-  verbatimbox                    \
-  pgf                            \
-  standalone                     \
-  xkeyval                        \
-  xcolor                         \
-  biblatex                       \
