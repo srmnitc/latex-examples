@@ -32,5 +32,3 @@ tlmgr install luatex
 tlmgr install                    \
   collection-latexextra          \
   collection-fontsrecommended    \
-  minted                         \
-  pygmentex                      \
